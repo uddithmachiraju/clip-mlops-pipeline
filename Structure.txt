@@ -1,0 +1,42 @@
+📦 CLIP-MLOps-Pipeline
+├── 📂 src/                     # Source code
+│   ├── 📂 models/              # Model-related files
+│   │   ├── image_encoder.py
+│   │   ├── text_encoder.py
+│   │   ├── transformer_encoder.py
+│   │   ├── attn_head.py
+│   │   ├── pos_embeds.py
+│   │   ├── model.py
+│   ├── 📂 data/                # Data processing
+│   │   ├── dataset.py
+│   │   ├── config.py
+│   ├── 📂 training/            # Training and evaluation
+│   │   ├── train.py
+│   │   ├── evaluate.py
+│   │   ├── test.py
+│   ├── 📂 api/                 # Model serving API
+│   │   ├── main.py             # FastAPI app 
+│   │   ├── Dockerfile          # API containerization
+│   ├── 📂 utils/               # Utility functions
+│   │   ├── preprocess.py
+│   │   ├── postprocess.py
+│   ├── 📂 tests/               # Unit & integration tests
+│   │   ├── test_data.py
+│   │   ├── test_model.py
+│   │   ├── test_api.py
+├── 📂 mlflow/                  # MLflow experiment tracking
+│   ├── mlflow_server.sh        # Script to start MLflow server
+│   ├── tracking.py             # MLflow tracking setup
+├── 📂 docker/                  # Docker configurations
+│   ├── Dockerfile              # Base image for training
+│   ├── docker-compose.yml      # Multi-container setup
+├── 📂 ci-cd/                   # CI/CD setup
+│   ├── Jenkinsfile             # Jenkins pipeline
+│   ├── run_tests.sh            # Script for automated tests
+├── 📂 results/                 # Results and analysis
+│   ├── Accuracy.png
+│   ├── Predictions.png
+│   ├── Sample.png
+├── README.md                   # Project documentation
+├── requirements.txt 
+├── .gitignore                   # Ignore unnecessary files
