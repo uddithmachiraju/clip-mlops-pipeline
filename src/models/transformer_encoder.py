@@ -1,8 +1,8 @@
 from torch import nn 
-from attn_head import MultiHeadAttention
+from src.models.attn_head import MultiHeadAttention
 
 class TransformerEncoder(nn.Module):
-    def __init__(self, hidden_dim, num_heads, mlp_ratio):
+    def __init__(self, hidden_dim, num_heads, mlp_ratio = 4):
         super(TransformerEncoder, self).__init__() 
         self.hidden_dim = hidden_dim 
         self.num_heads = num_heads 
