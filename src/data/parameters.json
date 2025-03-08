@@ -1,0 +1,18 @@
+
+{
+    "Emb-dim" : 32, 
+    "vit_hidden_dim": 9,
+    "image_size" : [28, 28], 
+    "patch_size" : [14, 14], 
+    "n_channels" : 1, 
+    "vit_layers" : 3, 
+    "vit_heads" : 3, 
+    "vocab_size" : 256, 
+    "text_dim" : 32, 
+    "text_heads" : 8, 
+    "text_layers" : 4, 
+    "lr" : 0.001, 
+    "max_sequence" : 32,
+    "epochs" : 2,
+    "batch_size" : 128  
+}
