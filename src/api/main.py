@@ -1,6 +1,5 @@
 import json 
 import torch 
-from PIL import Image
 from src.models.model import CLIP 
 from flask import Flask, request, jsonify
 from src.models.text_encoder import tokenizer
