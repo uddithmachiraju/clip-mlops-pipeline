@@ -34,7 +34,7 @@ class FashionMNIST(Dataset):
         image = self.transform(image) 
 
         caption, mask = tokenizer(
-            self.captions[self.dataset[self.split[index]['label']]]
+            self.captions[self.dataset[self.split][index]['label']]
         )
 
         mask = mask.repeat(len(mask), 1) 
