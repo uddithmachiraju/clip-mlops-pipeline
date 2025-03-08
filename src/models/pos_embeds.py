@@ -18,7 +18,7 @@ class PositionalEncoding(nn.Module):
         pe = torch.zeros(max_seq_length, hidden_dim) 
 
         for position in range(max_seq_length):
-            for i in hidden_dim:
+            for i in range(hidden_dim):
                 if position % 2 == 0:
                     pe[position][i] = np.sin(position / (10000 ** (i / hidden_dim))) 
                 else:
