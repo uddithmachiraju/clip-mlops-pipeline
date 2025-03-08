@@ -1,7 +1,7 @@
 import torch 
 from torch import nn 
-from pos_embeds import PositionalEncoding
-from transformer_encoder import TransformerEncoder
+from src.models.pos_embeds import PositionalEncoding
+from src.models.transformer_encoder import TransformerEncoder
 
 class ImageEncoder(nn.Module):
     """
@@ -16,7 +16,7 @@ class ImageEncoder(nn.Module):
         self.patches = ((image_size[0] * image_size[1]) // (patch_size[0] * patch_size[1]))
         self.max_seq_length = self.patches + 1
         self.linear_projection = nn.Conv2d(
-            n_channels = n_channels, out_channels = hidden_dim, 
+            in_channels = n_channels, out_channels = hidden_dim, 
             kernel_size = patch_size, stride = patch_size 
         )
         self.cls_token = nn.Parameter(torch.randn(1, 1, hidden_dim)) 
