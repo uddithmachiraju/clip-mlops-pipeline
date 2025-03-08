@@ -1,8 +1,8 @@
 import torch 
 from torch import nn 
 import numpy as np 
-from image_encoder import ImageEncoder 
-from text_encoder import TextEncoder 
+from src.models.image_encoder import ImageEncoder 
+from src.models.text_encoder import TextEncoder 
 
 class CLIP(nn.Module):
     def __init__(self, embedd_dim, vit_dim, image_size, 
