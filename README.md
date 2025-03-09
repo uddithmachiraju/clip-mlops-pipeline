@@ -12,7 +12,7 @@ The **CLIP-MLOps-Pipeline** is a Machine Learning Operations (MLOps) pipeline de
 
 **CI/CD Integration:** Automated pipeline with Jenkins for testing and deployment.
 
-**FastAPI for Model Serving:** Provides an efficient REST API for inference.
+**FlaskAPI for Model Serving:** Provides an efficient API for inference.
 
 # Project Structure
 ```
