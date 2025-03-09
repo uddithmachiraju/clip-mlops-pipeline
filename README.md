@@ -1,6 +1,6 @@
 # Overview
 
-The **CLIP-MLOps-Pipeline** is a Machine Learning Operations (MLOps) pipeline designed to train, evaluate, and deploy CLIP-based models for image-text processing. It includes modular components for data processing, model training, **experiment tracking with MLflow**, **API deployment with FastAPI**, and **CI/CD automation using Jenkins and Docker**.
+The **CLIP-MLOps-Pipeline** is a Machine Learning Operations (MLOps) pipeline designed to train, evaluate, and deploy CLIP-based models for image-text processing. It includes modular components for data processing, model training, **experiment tracking with MLflow**, **API deployment with FlaskAPI**, and **CI/CD automation using Jenkins and Docker**.
 
 # Features
 
