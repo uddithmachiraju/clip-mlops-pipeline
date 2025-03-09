@@ -1,0 +1,36 @@
+pipeline{
+    agent any
+
+    environment{
+        DOCKER_IMAGE = "clip-mlops" 
+    }
+
+    stages{
+        stage("Checkout Code"){
+            steps{
+                echo "Clonning into Repository"
+                checkout scm
+            }
+        }
+        stage("Building Docker Image"){
+            steps{
+                echo "Building docker image"
+                sh 'docker build -t $DOCKER_IMAGE -f docker/Dockerfile'
+            }
+        }
+        stage("Run Tests"){
+            steps{
+                echo "Running pytests"
+                sh 'docker run --rm $DOCKER_IMAGE pytest src/tests/test_model.py'
+            }
+        }
+    }
+    post{
+        success{
+            echo "All the test cases ran successfully!"
+        }
+        failure{
+            echo "Something went wrong!"
+        }
+    }
+}
